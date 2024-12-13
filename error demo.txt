@@ -1,0 +1,12 @@
+var invalidBlock = 130; // Block number you want to check
+try {
+    var block = eth.getBlock(invalidBlock);
+    if (block === null) {
+        console.log("Error: Block " + invalidBlock + " does not exist.");
+    } else {
+        console.log("Attempting to modify a mined block...");
+        throw new Error("You cannot modify or add data to a block once it's mined.");
+    }
+} catch (error) {
+    console.log("Error: " + error.message);
+}

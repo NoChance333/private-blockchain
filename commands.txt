@@ -1,0 +1,29 @@
+/////initialise {
+
+geth --datadir D:\geth\data\MyPrivateChain --networkid 8080 for 
+
+}
+
+
+///// geth attach to a new terminal for interacting with blockchain {
+
+    geth attach \\.\pipe\geth.ipc
+}
+
+////Unlock Without Expiry
+If you want to unlock the account indefinitely (until you manually lock it again), you can use: {
+    personal.unlockAccount("0x774f3e34c8f526f1f7d7641c89cd2813a8ed3e63", "123")
+
+}
+
+//////unclock with expiry{
+
+    personal.unlockAccount("0x774f3e34c8f526f1f7d7641c89cd2813a8ed3e63", "123", 300)
+
+}
+
+//////setup for mining of account{
+
+    miner.setEtherbase("0x774f3e34c8f526f1f7d7641c89cd2813a8ed3e63")
+
+}
